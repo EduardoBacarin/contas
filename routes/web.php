@@ -15,7 +15,7 @@ Route::get('/dashboard', function () {
 
 Route::prefix('/billing')->name('billing.')->group(function () {
     Route::get('/', [BillingController::class, 'index'])->name('index');
-    // Route::get('/{bill}', [BillingController::class, 'edit'])->name('edit');
+    Route::get('/create', [BillingController::class, 'create'])->name('create');
     /* Route::patch('/{bill}', [BillingController::class, 'update'])->name('update');
     Route::delete('/{bill}', [BillingController::class, 'destroy'])->name('destroy'); */
 })->middleware(['auth', 'verified']);

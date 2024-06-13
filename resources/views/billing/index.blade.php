@@ -10,7 +10,7 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <div class="flex flex-1 float-right">
-                        <x-bladewind::button>Subscribe Now</x-bladewind::button>
+                        <x-bladewind::button :href="route('billing.create')">Subscribe Now</x-bladewind::button>
                     </div>
                     <x-bladewind::table>
                         <x-slot name="header">
